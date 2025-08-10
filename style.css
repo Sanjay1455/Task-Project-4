@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  background: #333;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  width: 1000px; /* Fixed width — not good for mobile */
+  margin: auto;
+}
+
+.content {
+  flex: 3;
+  padding: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 20px;
+}
+/* Mobile-friendly changes */
+@media (max-width: 768px) {
+  /* Make layout full-width */
+  .container {
+    flex-direction: column;
+    width: 100%; /* Remove fixed width */
+  }
+
+  /* Stack nav items vertically */
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Reduce font size for mobile */
+  body {
+    font-size: 16px;
+  }
+
+  /* Ensure images scale */
+  img {
+    max-width: 100%;
+    height: 500px;
+  }
+}
+
+/* For extra small screens (mobile under 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar ul li a {
+    padding: 8px;
+  }
+}
